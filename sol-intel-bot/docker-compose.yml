@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  sol-intel-bot:
+    build: .
+    container_name: sol-intel-bot
+    env_file: .env
+    environment:
+      - PORT=${PORT:-3000}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    restart: unless-stopped
