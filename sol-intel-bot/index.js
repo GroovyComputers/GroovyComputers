@@ -265,7 +265,7 @@ function tsToDate(ts) {
 }
 
 function extractHandleFromRedirectHtml(html) {
-  const m = String(html).match(/https?:\\/\\/(?:x\\.com|twitter\\.com)\\/([A-Za-z0-9_]{1,15})(?:\\b|\\/|\\?)/i);
+  const m = String(html).match(/https?:\/\/(?:x\.com|twitter\.com)\/([A-Za-z0-9_]{1,15})(?:\b|\/|\?)/i);
   return m ? `@${m[1]}` : null;
 }
 
